@@ -1,12 +1,12 @@
-pragma solidity >=0.4.24;
+pragma solidity >=0.6.8;
+
 
 contract FunctionsContract {
-
     string ownerName;
-    uint8  ownerAge;
+    uint8 ownerAge;
 
     // Constructor
-    constructor (string memory name, uint8 age) public {
+    constructor(string memory name, uint8 age) public {
         ownerName = name;
         ownerAge = age;
     }
@@ -22,7 +22,11 @@ contract FunctionsContract {
     }
 
     // Get owner name and age
-    function  getOwnerInfo() public view returns (string memory name, uint8 age){
+    function getOwnerInfo()
+        public
+        view
+        returns (string memory name, uint8 age)
+    {
         name = ownerName;
         age = ownerAge;
     }
@@ -34,7 +38,17 @@ contract FunctionsContract {
     }
 
     // Get the age
-    function getOwnerAge() public view returns (uint8 age){
-        age = ownerAge;
+    function getOwnerAge() external view returns (uint8 age) {
+        age = ownerAge; // can only be called outside the smart contract
+        
+    }
+
+    function getSECRET() private view returns (uint256 code) {
+        return ownerAge; // can only be used inside contract;
+        //getOwnerAge(); // error: not visible at this point.
+    }
+
+    function getCode() internal view returns (uint256 _code) {
+        _code = ownerAge; // similar to private but can only be used in inherited contact too.
     }
 }
