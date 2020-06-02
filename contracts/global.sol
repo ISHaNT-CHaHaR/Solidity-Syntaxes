@@ -58,7 +58,7 @@ contract GlobalVariables {
     //tx
         //tx.origin;  // the ethereum address that sends the transaction 
     //msg
-        msg.value ;// amount of ether send to address  1wei = 10^(-18) ether
+        msg.value // amount of ether send to address  1wei = 10^(-18) ether
         msg.sender ;// these are addresses for every sender withi9n smart contract. and 
         // tx.origin is just the origin address if inheritance is there
 
