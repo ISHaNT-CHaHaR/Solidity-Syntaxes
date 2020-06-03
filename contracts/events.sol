@@ -2,7 +2,7 @@ pragma solidity >=0.4.24;
 
 
 contract EvenContract {
-    uint256 biddingends = now + 5 days;
+    uint256 biddingends = now+5 days;
 
     struct HighBidder {
         address bidder;
