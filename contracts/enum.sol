@@ -18,11 +18,9 @@ contract ExampleEnum {
     STATE state;
 
     //// OR I CAN USE ENUM WITH A STRUCT
-        struct User{
-            STATE state;
-        }
-
-
+    struct User {
+        STATE state;
+    }
 
     function setToActive() external {
         state = STATE.ACTIVE;
