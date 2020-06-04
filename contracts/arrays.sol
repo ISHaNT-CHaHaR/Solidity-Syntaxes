@@ -80,7 +80,7 @@ contract ArraysContract {
     //2. memory arrays
     // these arrays are not stored inside the blockchain.
     function bar() external {
-        uint256[] memory newArray = new uint256[](10);'
+        uint256[] memory newArray = new uint256[](10);
 
         newArray[0] = 10;
         newArray[1] = 20;
@@ -90,9 +90,6 @@ contract ArraysContract {
         delete newArray[5];
     }
 
-
     //3. arrays in fucntion
-    function yeah(uint[] calldata mtArg ) internal returns(uint[] memory){
-         
-     }
+    function yeah(uint256[] memory mtArg) internal returns (uint256[] memory) {}
 }
