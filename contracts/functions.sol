@@ -1,12 +1,12 @@
 pragma solidity >=0.4.24;
 
-contract FunctionsContract {
 
+contract FunctionsContract {
     string ownerName;
-    uint8  ownerAge;
+    uint8 ownerAge;
 
     // Constructor
-    constructor (string memory name, uint8 age) public {
+    constructor(string memory name, uint8 age) public {
         ownerName = name;
         ownerAge = age;
     }
@@ -22,7 +22,11 @@ contract FunctionsContract {
     }
 
     // Get owner name and age
-    function  getOwnerInfo() public view returns (string memory name, uint8 age){
+    function getOwnerInfo()
+        public
+        view
+        returns (string memory name, uint8 age)
+    {
         name = ownerName;
         age = ownerAge;
     }
@@ -33,8 +37,13 @@ contract FunctionsContract {
         return ownerName;
     }
 
-    // Get the age
-    function getOwnerAge() public view returns (uint8 age){
+    // Get the age // public is visible anywhere
+
+    function getOwnerAge() public view returns (uint8 age) {
         age = ownerAge;
+    }
+
+    function getSecretcode() private view returns (uint256 code) {
+        code = ownerAge;
     }
 }

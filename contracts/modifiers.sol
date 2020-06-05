@@ -17,4 +17,10 @@ contract Modifiers {
         // Code the adding a new bid
         return true;
     }
+
+    //  what i can do for modifiers is ...
+    // passing arguments 
+    // chaining /
+    // using for access control.
+    
 }
