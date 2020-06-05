@@ -37,6 +37,12 @@ contract FunctionsContract {
         return ownerName;
     }
 
+    // Get the age // public is visible anywhere
+
+    function getSecretcode() private view returns (uint256 code) {
+        code = ownerAge;
+    }
+
     // Get the age
     function getOwnerAge() external view returns (uint8 age) {
         age = ownerAge; // can only be called outside the smart contract
