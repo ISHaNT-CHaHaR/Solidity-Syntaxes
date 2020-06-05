@@ -37,17 +37,12 @@ contract FunctionsContract {
         return ownerName;
     }
 
-<<<<<<< HEAD
     // Get the age // public is visible anywhere
-
-    function getOwnerAge() public view returns (uint8 age) {
-        age = ownerAge;
-    }
 
     function getSecretcode() private view returns (uint256 code) {
         code = ownerAge;
     }
-=======
+
     // Get the age
     function getOwnerAge() external view returns (uint8 age) {
         age = ownerAge; // can only be called outside the smart contract
@@ -61,5 +56,4 @@ contract FunctionsContract {
     function getCode() internal view returns (uint256 _code) {
         _code = ownerAge; // similar to private but can only be used in inherited contact too.
     }
->>>>>>> 5c168f58744e43b9ec47d93f69783f3be72c9f27
 }
